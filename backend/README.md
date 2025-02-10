@@ -25,3 +25,10 @@ This project demonstrates a Node.js application following clean architecture pri
    \`\`\`bash
    npm run dev
    \`\`\`" > README.md
+
+## Build Docker Image
+
+\`\`\`bash
+docker build -t live-up-clip-backend-service .   
+\`\`\`
+
