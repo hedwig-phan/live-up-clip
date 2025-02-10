@@ -32,3 +32,8 @@ This project demonstrates a Node.js application following clean architecture pri
 docker build -t live-up-clip-backend-service .   
 \`\`\`
 
+## Run Docker Container
+
+\`\`\`bash
+docker run -d -p 3000:3000 live-up-clip-backend-service
+\`\`\`
