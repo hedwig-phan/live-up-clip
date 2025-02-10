@@ -1,6 +1,7 @@
 import express from 'express';
-import userRoutes from './interfaces/routes/user.routes';
 import cors from 'cors';
+import userRoutes from './interfaces/routes/user.routes';
+import helloRoutes from './interfaces/routes/hello.routes';
 
 const app = express();
 const port = 3000;
@@ -17,6 +18,7 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use('/api', userRoutes);
+app.use('/api', helloRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
