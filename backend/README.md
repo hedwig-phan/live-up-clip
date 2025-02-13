@@ -1,4 +1,13 @@
+# Backend Service
 This project demonstrates a Node.js application following clean architecture principles.
+
+## Tech Stack
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Language**: TypeScript
+- **Database**: PostgreSQL
+- **ORM**: Prisma
+- **Container**: Docker
 
 ## Structure
 
@@ -8,6 +17,11 @@ This project demonstrates a Node.js application following clean architecture pri
     - \`application/\`: Use cases and business logic
     - \`infrastructure/\`: External implementations
     - \`interfaces/\`: Controllers and routes
+
+## Prerequisites
+- Docker and Docker Compose
+- Node.js 18+
+- npm
 
 ## Getting Started
 
@@ -32,8 +46,59 @@ This project demonstrates a Node.js application following clean architecture pri
 docker build -t live-up-clip-backend-service .   
 \`\`\`
 
-## Run Docker Container
+### Run Docker Container
 
 \`\`\`bash
 docker run -d -p 3000:3000 live-up-clip-backend-service
 \`\`\`
+
+### Start all services
+
+\`\`\`bash
+docker compose up -d
+\`\`\`
+
+### Stop all services
+
+\`\`\`bash
+docker compose down
+\`\`\`
+
+### View logs
+
+\`\`\`bash
+docker logs -f live-up-clip-backend-service
+\`\`\`
+
+## Prisma
+
+### Generate Prisma Client
+
+\`\`\`bash
+npx prisma generate
+\`\`\`
+
+### Run Migrations
+
+\`\`\`bash
+npx prisma migrate dev
+\`\`\`
+
+### Create a new migration
+Update the User model in Prisma schema and run the following command to create a new migration:
+\`\`\`bash
+npx prisma migrate dev --name <migration-name>
+\`\`\`
+
+### Apply migrations
+
+\`\`\`bash
+npx prisma migrate deploy
+\`\`\`
+
+
+
+
+
+
+
